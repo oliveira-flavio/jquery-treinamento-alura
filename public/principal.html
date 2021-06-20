@@ -2,14 +2,22 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <title>Typer Timer</title>
+    <title>Typer Game</title>
   </head>
   <body>
+    <h1>Typer Game</h1>
     <p class="frase">Esta frase tem 5 palavras</p>
 
     <ul class="informacoes">
       <li><span id="tamanho-frase">5</span> palavras</li>
       <li>10 segundos</li>
+    </ul>
+
+    <textarea class="campo-digitacao" cols="40" rows="10"></textarea>
+
+    <ul>
+      <li><span id="contador-caracteres">0</span> caracteres</li>
+      <li><span id="contador-palavras">0</span> palavras</li>
     </ul>
 
     <script src="js/jquery.js"></script>
