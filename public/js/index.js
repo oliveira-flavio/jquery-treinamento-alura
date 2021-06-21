@@ -1,3 +1,4 @@
+var tempoInicial = $("#tempo-digitacao").text();
 var frase = $(".frase").text();
 var numeroPalavras = frase.split(" ").length;
 var tamanhoFrase = $("#tamanho-frase");
@@ -15,7 +16,6 @@ campo.on("input", function () {
 });
 
 var tempoRestante = $("#tempo-digitacao").text();
-
 campo.one("focus", function () {
     var cronometroID = setInterval(function () {
         tempoRestante--;
@@ -26,4 +26,12 @@ campo.one("focus", function () {
         }
 
     }, 1000);
+});
+
+$("botao-reiniciar").click(function () {
+    campo.attr("disabled", false);
+    campo.val("");
+    $("#contador-palavras").text("0");
+    $("#contador-caracteres").text("0");
+    $("#tempo-digitacao").text(tempoInicial);
 });
