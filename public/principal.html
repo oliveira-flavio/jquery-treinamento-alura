@@ -6,21 +6,22 @@
     <link rel="stylesheet" href="css/libs/materialize.min.css" />
   </head>
   <body>
-    <h1>Typer Game</h1>
-    <p class="frase">Esta frase tem 5 palavras</p>
+    <div class="container">
+      <h1 class="center">Typer Game</h1>
+      <p class="frase center">Esta frase tem 5 palavras</p>
 
-    <ul class="informacoes">
-      <li><span id="tamanho-frase">5</span> palavras</li>
-      <li><span id="tempo-digitacao">10</span> segundos</li>
-    </ul>
+      <ul class="informacoes center">
+        <li><span id="tamanho-frase">5</span> palavras</li>
+        <li><span id="tempo-digitacao">10</span> segundos</li>
+      </ul>
 
-    <textarea class="campo-digitacao" cols="40" rows="10"></textarea>
-    <button id="botao-reiniciar">Reiniciar Jogo</button>
-    <ul>
-      <li><span id="contador-caracteres">0</span> caracteres</li>
-      <li><span id="contador-palavras">0</span> palavras</li>
-    </ul>
-
+      <textarea class="campo-digitacao" cols="40" rows="10"></textarea>
+      <button id="botao-reiniciar">Reiniciar Jogo</button>
+      <ul class="center">
+        <li><span id="contador-caracteres">0</span> caracteres</li>
+        <li><span id="contador-palavras">0</span> palavras</li>
+      </ul>
+    </div>
     <script src="js/jquery.js"></script>
     <script src="js/index.js"></script>
   </body>
