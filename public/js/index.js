@@ -35,12 +35,17 @@ function inicializaCronometro() {
             tempoRestante--;
             $("#tempo-digitacao").text(tempoRestante);
             if (tempoRestante < 1) {
-                campo.attr("disabled", true);
                 clearInterval(cronometroID);
-                campo.toggleClass("campo-desativado");
+                finalizaJogo();
             }
         }, 1000);
     });
+}
+
+function finalizaJogo() {
+    campo.attr("disabled", true);
+    campo.toggleClass("campo-desativado");
+    inserePlacar();
 }
 
 function indicadorEscrita() {
@@ -57,6 +62,19 @@ function indicadorEscrita() {
         }
     });
 }
+
+function inserePlacar() {
+    var corpoTabela = $(".placar").find("tbody");
+    var usuario = "Flávio";
+    var numeroPalavras = $("#contador-palavras").text();
+
+    var linha = "<tr>"
+    "<td>" + usuario + "</td>"
+    "<td>" + numeroPalavras + "</td>"
+    "</tr>"
+    corpoTabela.prepend(linha);
+}
+
 
 function reiniciaJogo() {
     campo.attr("disabled", false);
