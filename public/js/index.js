@@ -64,17 +64,23 @@ function indicadorEscrita() {
 }
 
 function inserePlacar() {
+
     var corpoTabela = $(".placar").find("tbody");
     var usuario = "Flávio";
     var numeroPalavras = $("#contador-palavras").text();
+    var botaoRemover = "<a href='#'><i class='small material-icons'> delete</i></a>";
 
-    var linha = "<tr>"
-    "<td>" + usuario + "</td>"
-    "<td>" + numeroPalavras + "</td>"
-    "</tr>"
+    var linha = "<tr>" +
+        "<td>" + usuario + "</td>" +
+        "<td>" + numeroPalavras + "</td>" +
+        "<td>" + botaoRemover + "</td>" +
+        "</tr>";
     corpoTabela.prepend(linha);
 }
 
+$(".botao-remover").click(); {
+    $(this).parent().parent().remove();
+}
 
 function reiniciaJogo() {
     campo.attr("disabled", false);
